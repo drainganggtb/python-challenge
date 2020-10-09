@@ -23,17 +23,23 @@ with open(election_csv) as csv_file:
     for row in csv_reader:
         #count number of rows which == number of votes
         total_votes+=1
-
-        #candidate name 
-        candidate_name = row[2]
-
-        #conditional to populate array of candidate options
-        if candidate_name not in candidate_options:
-            candidate_options.append(candidate_name)
-
-            #begin tracking voter counts per candidate
-            candidate_votes[candidate_name]=0
-            
-            #add vote to candidate's count
-            candidate_votes[candidate_name]+=1  
+        if row[2] in candidate_options:
+            candidate_votes[candidate_options.index(row[2])]+=1
+        else:
+            candidate_options.append(row[2])
+            candidate_votes.append(1)
     print(total_votes)
+
+    #     #candidate name 
+    #     candidate_name = row[2]
+
+    #     #conditional to populate array of candidate options
+    #     if candidate_name not in candidate_options:
+    #         candidate_options.append(candidate_name)
+
+    #         #begin tracking voter counts per candidate
+    #         candidate_votes[candidate_name]=0
+            
+    #         #add vote to candidate's count
+    #         candidate_votes[candidate_name]+=1  
+    # print(total_votes)
