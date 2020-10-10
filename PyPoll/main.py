@@ -3,7 +3,7 @@ import os
 import csv
 
 #here is our file
-election_csv = os.path.join("PyPoll", "Resources", "election_data.csv")
+election_csv = os.path.join("Resources", "election_data.csv")
 
 #Begin by defining variables and initializing them
 total_votes=0
@@ -28,18 +28,21 @@ with open(election_csv) as csv_file:
         else:
             candidate_options.append(row[2])
             candidate_votes.append(1)
-    print(total_votes)
-
-    #     #candidate name 
-    #     candidate_name = row[2]
-
-    #     #conditional to populate array of candidate options
-    #     if candidate_name not in candidate_options:
-    #         candidate_options.append(candidate_name)
-
-    #         #begin tracking voter counts per candidate
-    #         candidate_votes[candidate_name]=0
-            
-    #         #add vote to candidate's count
-    #         candidate_votes[candidate_name]+=1  
     # print(total_votes)
+    # print(candidate_options)
+#Assign percents
+for votes in candidate_votes:
+    #f is floating points, 3 specify 3 digits 
+    Percents.append('%.3f'%((votes*100)/total_votes))
+#find winner
+winner=candidate_options[candidate_votes.index(max(candidate_votes))
+
+#print results
+print("Election Results \n.........................")
+print(".........................")
+print(f"Total Votes: {total_votes}\n.........................")
+for i in range(len(candidate_options)):
+    print(f"{candidate_options[i]}: {Percents[i]}% [{candidate_votes[i]}]")
+print(".........................")
+print(f"Winner: {winner}")
+print(".........................")
