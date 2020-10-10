@@ -1,6 +1,6 @@
 # Python Challenge
-The following projects **PyBank** and **PyPoll** involved gathering data from csv files through writing Python scripts. 
-Within the folders for each challenge within this repository, the *main.py* file contains the necessary script to read through the csv files contained within the Resources folders.
+The following projects **PyBank** and **PyPoll** involved gathering data and outputting specific information from csv files through writing Python scripts. 
+Within the folders in this repository, the *main.py* file contains the necessary script to analyze the csv files contained within the Resources folders.
 Additionally, the **analysis** folder contains the file *results.txt*, which outputs the same information that the script prints in the terminal.
 
 # PyBank
