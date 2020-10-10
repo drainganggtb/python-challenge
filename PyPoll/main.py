@@ -45,3 +45,13 @@ for i in range(len(candidate_options)):
 print(".........................")
 print(f"Winner: {winner}")
 print(".........................")
+
+#send to txt file
+results=open("analysis/results.txt", "w")
+results.write("Election Results \n.........................\n")
+results.write(f"Total Votes: {total_votes}\n.........................\n")
+for i in range(len(candidate_options)):
+    results.write(f"{candidate_options[i]}: {Percents[i]}% [{candidate_votes[i]}]\n")
+results.write(".........................\n")
+results.write(f"Winner: {winner}\n")
+results.write(".........................")
