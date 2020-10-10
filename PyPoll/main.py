@@ -35,11 +35,10 @@ for votes in candidate_votes:
     #f is floating points, 3 specify 3 digits 
     Percents.append('%.3f'%((votes*100)/total_votes))
 #find winner
-winner=candidate_options[candidate_votes.index(max(candidate_votes))
+winner=candidate_options[candidate_votes.index(max(candidate_votes))]
 
 #print results
 print("Election Results \n.........................")
-print(".........................")
 print(f"Total Votes: {total_votes}\n.........................")
 for i in range(len(candidate_options)):
     print(f"{candidate_options[i]}: {Percents[i]}% [{candidate_votes[i]}]")
