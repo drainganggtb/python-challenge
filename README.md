@@ -51,7 +51,7 @@ The idea behind this challenge is modernizing the voting process for a small tow
     -  The total number of votes each candidate won
 
 
-    -  The winner of the election based on popular vote.
+    -  The winner of the election based on popular vote
 
 -  The results which appear below are the result of the script. They can be found in *results.txt* within the analysis folder
 ```python
