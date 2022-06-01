@@ -28,7 +28,7 @@ with open(election_csv) as csv_file:
         else:
             candidate_options.append(row[2])
             candidate_votes.append(1)
-    # print(total_votes)
+    print(total_votes)
     # print(candidate_options)
 #Assign percents
 for votes in candidate_votes:
